@@ -75,3 +75,19 @@ GET /v0/mcp
 ```
 
 This will return the server metadata and available tools with their schemas.
+
+## Setting up on MCP client
+
+Add this to mcp_config.json - 
+
+"embeddables-check-mcp": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://solana-dev.devsnc.com/mcp/servicenow/sse",
+        "--header",
+        "username: maint",
+        "--header",
+        "password: maint"
+      ]
+    }
